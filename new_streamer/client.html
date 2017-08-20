@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>client program</title>
+    <meta content="">
+      
+    
+
+  </head>
+  <body >
+
+  	<h1>Client program</h1>
+
+  <div id="videos">
+    <video id="video" autoplay muted></video>
+  </div>
+
+
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/lib/adapter.js"></script>
+  <script src="/js/main.js"></script></body>
+
+  <script type="text/javascript">
+window.onbeforeunload = function(e) {
+  socket.disconnect();
+  //socket.emit('dis');
+};
+function dis(){
+  console.log("disconnect button pressed");
+  console.log("roomis "+room);
+  socket.disconnect();
+  //socket.emit('dis');
+}
+</script>
+<hr><button onclick="dis()">Disconnect</button>
+  	</html>
